@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Agregar Estudiante</h1>
+<div mat-dialog-content>
+   <form [formGroup]="studentForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre del estudiante</mat-label>
+            <input formControlName="firstName" matInput placeholder="Nombre">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Apellido del estudiante</mat-label>
+            <input formControlName="lastName" matInput placeholder="Apellido">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Correo</mat-label>
+            <input formControlName="email" matInput type="email" placeholder="Correo eléctronico">
+        </mat-form-field>   
+   </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()">{{ actionBTN }}</button>
+</div>
